@@ -6,13 +6,9 @@
 // STEP 5: Code
 // STEP 6: Proof(OPT)
 // Return kth to Last: implement an algorithm to find the kth to last element of a singly linked list
-var Node = function(value) {
-  var node = {};
-
-  node.value = value;
-  node.next = null;
-
-  return node;
+const Node = (value) => {
+  this.value = value;
+  this.next = null;
 };
 
 // l = current list size 
