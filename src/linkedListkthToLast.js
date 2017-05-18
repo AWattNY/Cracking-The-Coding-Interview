@@ -12,7 +12,9 @@ const Node = (value) => {
 };
 
 // l = current list size 
+
 // current kth to last =  l + k
+
 // look at iterative way and recursive way 
 // Iterative method expected O(n) Time O(1) space
 // Start at first node 
