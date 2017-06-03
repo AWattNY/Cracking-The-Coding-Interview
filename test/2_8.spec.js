@@ -2,7 +2,7 @@ import LinkedList from '../src/linkedListHelperFunctions';
 import loopDetection from '../src/2_8_loopDetection';
 import { expect } from 'chai';
 
-describe('linkedList', function() {
+describe('Ctci - linkedList 2-8 Loop Detection', function() {
   var linkedList1;
   var linkedList2;
   var entryPoint;

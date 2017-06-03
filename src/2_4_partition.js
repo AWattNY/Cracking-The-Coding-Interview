@@ -9,9 +9,27 @@
 
 // start at head
 // 
+import LinkedList from './linkedListHelperFunctions';
 
-var partition = function (rotated, target) {
-  // Your code here:
+var partition = function ( node, n ) {
+  let R = new LinkList();
+  R.head = node;
+  R.tail = node;
+
+  while ( node !== null ) {
+    const nextNode = node.next;
+    if ( node.value < n ) {
+      node.next = R.head;
+      R.head = node;
+    } else {
+      R.tail.next = node;
+      R.tail = node;
+    }
+    node = nextNode;
+  } 
+  R.tail.next = null;
+  return R.Head;
 }; 
 
 
+module.exports = partition;

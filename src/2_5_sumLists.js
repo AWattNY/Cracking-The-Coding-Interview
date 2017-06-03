@@ -19,6 +19,9 @@ var sumLists = function (List1, List2) {
     currentNode2 = currentNode2 ? currentNode2.next : null;
      
   }
+  if ( carry === 1 ) {
+    result.addToTail(carry);
+  }  
   return result;
 }; 
 

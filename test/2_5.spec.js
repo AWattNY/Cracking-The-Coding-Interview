@@ -2,7 +2,7 @@ import LinkedList from '../src/linkedListHelperFunctions';
 import sumLists from '../src/2_5_sumLists';
 import { expect } from 'chai';
 
-describe('linkedList', function() {
+describe('Ctci - linkedList 2-5 Sum Lists', function() {
   var linkedList1;
   var linkedList2;
   var sum;
@@ -64,6 +64,36 @@ describe('linkedList', function() {
     linkedList2.addToTail(5);
     sum = sumLists( linkedList1, linkedList2);
     expect(sum.convertToNumber()).to.equal(1864);
+    
+  });
+
+  it('should return the sum of the 2 linked lists of different length', function() {
+    linkedList1.addToTail(1);
+    linkedList1.addToTail(3);
+    linkedList1.addToTail(6);
+    linkedList2.addToTail(1);
+    linkedList2.addToTail(4);
+    linkedList2.addToTail(8);
+    sum = sumLists( linkedList1, linkedList2);
+    expect(sum.convertToNumber()).to.equal(1472);
+    
+  });
+
+  it('should return the sum of the 2 linked lists of different length', function() {
+    linkedList1.addToTail(5);
+    linkedList2.addToTail(5);
+    sum = sumLists( linkedList1, linkedList2);
+    expect(sum.convertToNumber()).to.equal(10);
+    
+  });
+
+  it('should return the sum of the 2 linked lists of different length', function() {
+    linkedList1.addToTail(5);
+    linkedList1.addToTail(1);
+    linkedList1.addToTail(2);
+    linkedList2.addToTail(5);
+    sum = sumLists( linkedList1, linkedList2);
+    expect(sum.convertToNumber()).to.equal(220);
     
   });
 

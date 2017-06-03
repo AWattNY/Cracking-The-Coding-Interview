@@ -70,4 +70,16 @@ LinkedList.prototype.print = function(target) {
   return result + 'null';
 };
 
+LinkedList.prototype.nodeCount = function(target) {
+  let currentNode = this.head;
+  let nodeCount = 0;
+  while ( currentNode ) {
+    if (currentNode.value === target ) {
+      nodeCount++;
+    }
+    currentNode = currentNode.next;
+  }
+  return nodeCount;
+};
+
 module.exports = LinkedList;

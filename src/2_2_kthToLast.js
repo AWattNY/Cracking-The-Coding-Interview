@@ -22,15 +22,4 @@ const kthToLast = ( head, k) => {
   return first;
 };
 
-// l = current list size 
-
-// current kth to last =  l + k
-
-// look at iterative way and recursive way 
-
-// Iterative method expected O(n) Time O(1) space
-// Start at first node 
-// While node.next not null 
-//   
-
 module.exports = kthToLast;
