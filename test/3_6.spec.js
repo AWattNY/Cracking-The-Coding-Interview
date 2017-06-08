@@ -2,7 +2,7 @@ import Queue from '../src/queueHelperFunctions';
 import AnimalShelter from '../src/3_6_animalShelter';
 import { expect } from 'chai';
 
-describe('queue', function() {
+describe('Ctci - Stacks and Queues 3-6 Animal Shelter', function() {
   var queue;
   const Animal = function( name, specie ) {
     this.name = name;
