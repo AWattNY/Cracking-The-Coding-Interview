@@ -22,4 +22,8 @@ Stack.prototype.size = function() {
   return this._size;
 };
 
+Stack.prototype.peek = function() {
+  return this._storage[this._size - 1];
+};
+
 module.exports = Stack;
