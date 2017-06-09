@@ -1,3 +1,45 @@
+class StackMin1 {
+  constructor() {
+    this._storage = {};
+    this._size = 0;
+  }  
+
+  push(value) {
+    let node;
+    let min;
+    if ( this._size === 0 ) {
+      node = { value, min: value }; 
+    } else {
+      let previousMin = this._storage[this._size - 1].min;
+      node = { value, min: Math.min(previousMin, value) };
+    }
+    this._storage[this._size] = node;
+    this._size++;
+  }
+
+  pop() {
+    this._size && this._size--;
+    var result = this._storage[this._size];
+  
+    delete this._storage[this._size];
+
+    return result;
+  }
+
+  size() {
+    return this._size;
+  }
+
+  peek() {
+    return this._storage[this._size - 1];
+  }
+
+  min() {
+    return this._storage[this._size - 1].min;
+  }
+
+}
+
 const StackMin = function() {
   this._storage = {};
   this._size = 0;
@@ -38,4 +80,4 @@ StackMin.prototype.min = function() {
   return this._storage[this._size - 1].min;
 };
 
-module.exports = StackMin;
+module.exports = StackMin1;
