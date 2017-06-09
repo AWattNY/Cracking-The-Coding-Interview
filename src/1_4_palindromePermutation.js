@@ -1,8 +1,6 @@
 const isPermutationOfPalindrome = (string) => {
-  let charCount = {
-    even: 0,
-    odd: 0
-  }; 
+  let charCount = {};
+  let odd = 0; 
   for (var i = 0; i < string.length; i++) {
     const currentChar = string.charAt(i);
     if (!charCount[currentChar]) {
@@ -11,14 +9,12 @@ const isPermutationOfPalindrome = (string) => {
       charCount[currentChar]++;	
     }
     if (charCount[currentChar] % 2 === 0) {
-      charCount['even']++;
-      charCount['odd'] = Math.max(0, charCount['odd'] - 1);
+      odd--;
     } else {
-      charCount['odd']++;
-      charCount['even'] = Math.max(0, charCount['even'] - 1);
+      odd++;
     }
   }
-  return charCount['odd'] <= 1; 
+  return odd <= 1; 
 };
 
 module.exports = isPermutationOfPalindrome;
