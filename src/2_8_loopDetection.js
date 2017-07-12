@@ -1,24 +1,24 @@
 const loopDetection = (head) => {
   let slow = head;
   let fast = head;
-  var collisionNode;
     
-  while ( fast !== null || fast.next !== null ) {
+  while ( slow !== null || fast !== null ) {
     slow = slow.next;
     fast = fast.next.next;
-    if ( slow.value === fast.value ) {
-      collisionNode = slow;
+    if ( Object.is(slow, fast) ) {
       break; 
     }
   }
-
+  if ( slow === null || fast === null ) {
+    return null;
+  }
   slow = head;
-  fast = collisionNode;
-  while ( slow.value !== fast.value ) {
+  while ( !Object.is(slow, fast) ) {
     slow = slow.next;
     fast = fast.next;
     
   }
+  console.log(slow);
   return slow;
 };
 
