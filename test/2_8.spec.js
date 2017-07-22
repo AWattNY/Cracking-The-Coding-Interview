@@ -26,7 +26,7 @@ describe('Ctci - linkedList 2-8 Loop Detection', function() {
     var nodeF = linkedList1.head.next.next.next.next.next;
     linkedList1.tail.next = nodeF;
     entryPoint = loopDetection( linkedList1.head);
-    expect(entryPoint.value).to.equal('F');
+    expect(Object.is(entryPoint, nodeF)).to.equal(true);
     
   });
 
@@ -45,7 +45,7 @@ describe('Ctci - linkedList 2-8 Loop Detection', function() {
     var nodeD = linkedList2.head.next.next.next;
     linkedList2.tail.next = nodeD;
     entryPoint = loopDetection( linkedList2.head);
-    expect(entryPoint.value).to.equal('D');
+    expect(Object.is(entryPoint, nodeD)).to.equal(true);
     
   });
 
