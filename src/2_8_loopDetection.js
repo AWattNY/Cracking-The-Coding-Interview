@@ -18,7 +18,6 @@ const loopDetection = (head) => {
     fast = fast.next;
     
   }
-  console.log(slow);
   return slow;
 };
 
