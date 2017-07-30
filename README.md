@@ -4,7 +4,7 @@
 <code> $ npm install</code>
 <h2>Run Tests</h2>
 <code> $ npm test</code>
-![screen shot 2017-07-30 at 4 18 46 pm](https://user-images.githubusercontent.com/20860228/28757961-ee12f0fe-7542-11e7-8ae5-6a8b31694e62.png)
+(https://user-images.githubusercontent.com/20860228/28757961-ee12f0fe-7542-11e7-8ae5-6a8b31694e62.png)
 <h2>Progress</h2>
 <ol>
 <li>Chapter 1 - Arrays and Strings: <code>5 / 9</code>  complete.</li>
