@@ -1,5 +1,5 @@
-<h2>My Solutions to Cracking The Coding Interview </h2>
-
+<h2>My Javascript Solutions to Cracking The Coding Interview </h2>
+<h3>Tested with Karma - Mocha - Chai </h3>
 <ol>
 <li>Chapter 1 - Arrays and Strings: <code>5 / 9</code>  complete.</li>
 <li>Chapter 2 - Linked Lists: <code>8 / 8</code> complete.</li>
