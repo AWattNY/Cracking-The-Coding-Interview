@@ -1,5 +1,5 @@
 <h2>My Javascript Solutions to Cracking The Coding Interview </h2>
-<h4>These are my Solutions to some of Cracking the Coding Interview Problems complete with Tests uding Karma - Mocha - Chai </h4>
+<h4>These are my Solutions to some of Cracking the Coding Interview Problems complete with Tests using Karma - Mocha - Chai </h4>
 <h2>Installation</h2>
 <code> $ npm install</code>
 <h2>Run Tests</h2>
