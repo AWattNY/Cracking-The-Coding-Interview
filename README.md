@@ -1,5 +1,7 @@
 <h2>My Javascript Solutions to Cracking The Coding Interview </h2>
-<h3>Tested with Karma - Mocha - Chai </h3>
+<h4>These is my Solution to some of Cracking the Coding Interview Problems complete with Tests uding Karma - Mocha - Chai </h4>
+<h2>Installation</h2>
+<code> $ npm install</code>
 <ol>
 <li>Chapter 1 - Arrays and Strings: <code>5 / 9</code>  complete.</li>
 <li>Chapter 2 - Linked Lists: <code>8 / 8</code> complete.</li>
