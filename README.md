@@ -1,6 +1,6 @@
 ![alt](https://user-images.githubusercontent.com/20860228/28757980-a1f5c812-7543-11e7-9abc-bd6801d121ea.png)
 # My Javascript Solutions to Cracking The Coding Interview
-## These are my Solutions to some of Cracking the Coding Interview Problems complete with Tests using Karma - Mocha - Chai 
+#### These are my Solutions to some of Cracking the Coding Interview Problems complete with Tests using Karma - Mocha - Chai 
 ## Installation
 <code> $ npm install</code>
 ## Run Tests
