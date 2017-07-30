@@ -2,6 +2,9 @@
 <h4>These is my Solution to some of Cracking the Coding Interview Problems complete with Tests uding Karma - Mocha - Chai </h4>
 <h2>Installation</h2>
 <code> $ npm install</code>
+<h2>Run</h2>
+<code> $ npm test</code>
+<h2>Progress</h2>
 <ol>
 <li>Chapter 1 - Arrays and Strings: <code>5 / 9</code>  complete.</li>
 <li>Chapter 2 - Linked Lists: <code>8 / 8</code> complete.</li>
