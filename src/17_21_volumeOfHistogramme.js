@@ -17,9 +17,41 @@ const getHistVolume = (arr) => {
   for ( var i = 0; i < n; i++ ) {
     waterVolume += Math.min(left[i], right[i]) - arr[i];
   }
-  console.log(left);
-  console.log(right);
   return waterVolume;
 };
 
-module.exports = getHistVolume;
+const getHistVolumeOpt = (arr) => {
+  let waterVolume = 0;
+  let leftMax = 0;
+  let rightMax = 0;
+  let lo = 0;
+  let hi = arr.length - 1;
+
+  while ( lo <= hi ) {
+
+    if ( arr[lo] < arr[hi] ) {
+      if ( arr[lo] > leftMax ) {
+        leftMax = arr[lo];
+      } else {
+        waterVolume += leftMax - arr[lo];
+        lo++;
+      }
+    } else {
+      if ( arr[hi] > rightMax ) {
+        rightMax = arr[hi];
+      } else {
+        waterVolume += rightMax - arr[hi];
+        hi--;
+      }
+    }
+  }
+
+  
+  return waterVolume;
+};
+
+module.exports = {
+  getHistVolume,
+  getHistVolumeOpt
+};
+
