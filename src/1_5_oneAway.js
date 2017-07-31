@@ -1,50 +1,48 @@
-const isOneAway = (string1, string2) => {
-  if (string2.length > string1.length + 1) {
-    return false;
-  }
-  let charCount = {};
-  let charCount2 = {};
-  let editsAway = 0;
-  
-  for ( var i = 0; i < string1.length; i++) {
-    var currentChar = string1.charAt(i);
-    if (!charCount[currentChar]) {
-      charCount[currentChar] = 1;
-    } else {
-      charCount[currentChar]++;
+const checkOneReplacemenetAway = (string1, string2) => {
+  let index = 0;
+  let oneDifferent = false;
+  while ( index < string1.length ) {
+    if ( string1.charAt(index) !== string2.charAt(index) ) {
+      if ( oneDifferent ) {
+        return false;
+      }
+      oneDifferent = true;
     } 
+    index++;
   }
+  return true;
+};
 
-  for ( var i = 0; i < string2.length; i++) {
-    var currentChar = string2.charAt(i);
-    if (!charCount[currentChar]) {
-      editsAway++;
-      if ( editsAway > 1 ) {
+const checkOneInsertAway = (string1, string2) => {
+  const n = string1.length;
+  const m = string2.length;
+  let index1 = 0;
+  let index2 = 0;
+  while ( index1 < n && index2 < m ) {
+    if ( string1.charAt(index1) !== string2.charAt(index2) ) {
+      if ( index1 !== index2 ) {
         return false;
       }
+      index2++;
     } else {
-      charCount[currentChar]--;
-      if (charCount[currentChar] < -1) {
-        return false;
-      }
+      index1++;
+      index2++;
     }
-    if (!charCount2[currentChar]) {
-      charCount2[currentChar] = 1;
-    } else {
-      charCount2[currentChar]++;
-    } 
   }
+  return true;
+};
 
-  for ( var i = 0; i < string1.length; i++) {
-    var currentChar = string1.charAt(i);
-    // if (!charCount2[currentChar] && editsAway === 1) {
-    //   editsAway++;
-    //   if ( editsAway > 1 ) {
-    //     return false;
-    //   }
-    // } 
-  }  
-  return true;  
+const isOneAway = (string1, string2) => {
+  const n = string1.length;
+  const m = string2.length;
+  if ( n === m ) {
+    return checkOneReplacemenetAway(string1, string2);
+  } else if ( n + 1 === m) {
+    return checkOneInsertAway(string1, string2);
+  } else if ( n === m + 1 ) {
+    return checkOneInsertAway(string2, string1);
+  }
+  return false;
 };
 
 module.exports = isOneAway;
