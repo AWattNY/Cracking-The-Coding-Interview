@@ -8,7 +8,7 @@
 
 ## Progress
 <ol>
-<li>Chapter 1 - Arrays and Strings: <code>6 / 9</code>  complete.</li>
+<li>Chapter 1 - Arrays and Strings: <code>7 / 9</code>  complete.</li>
 <li>Chapter 2 - Linked Lists: <code>8 / 8</code> complete.</li>
 <li>Chapter 3 - Stacks and Queues: <code>5 / 6</code>  complete.</li>
 <li>Chapter 4 - Trees and Graphs: <code>7 / 12</code> complete.</li>
