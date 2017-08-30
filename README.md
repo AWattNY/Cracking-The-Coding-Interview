@@ -14,6 +14,6 @@
 <li>Chapter 4 - Trees and Graphs: <code>7 / 12</code> complete.</li>
 <li>Chapter 8 - Recursion and Dynamic Programming: <code>1 / 12</code>  complete.</li>
 <li>Chapter 10 - Sorting and Searching: <code>1 / 11</code> complete.</li>
-<li>Chapter 17 - Hard: <code>1 / 26</code> complete.</li>
+<li>Chapter 17 - Hard: <code>2 / 26</code> complete.</li>
 </ol>
 
