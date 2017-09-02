@@ -1,3 +1,5 @@
+const BinaryHeap = require('./binaryHeap');
+
 const swap = (arr, i, j) => {
   let temp = arr[i];
   arr[i] = arr[j];
@@ -31,4 +33,22 @@ const kthSmallest = (array, lo, hi, k) => {
   return null;
 };
 
-module.exports = kthSmallest;
+const kthSmallestBH = (array, k) => {
+  if ( k > array.length ) {
+    return null;
+  }
+  let bH = new BinaryHeap( x => x );
+  let results = [];
+  array.forEach(el => bH.push(el));
+  for ( var i = 0; i < k; i++ ) {
+    results.push(bH.pop());
+  }
+  return ( results.length === 0 ) ? null : results;
+
+
+};
+
+module.exports = { 
+  kthSmallest,
+  kthSmallestBH
+};  
