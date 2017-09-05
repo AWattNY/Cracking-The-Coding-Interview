@@ -1,5 +1,5 @@
 const isMatch = (string, pattern) => {
-  let hashMap = new Map();
+  let hashMap = {};
   const check = ( str, pat) => {
     if ( str === '' && pat === '' ) {
       return true;
@@ -8,17 +8,22 @@ const isMatch = (string, pattern) => {
       return false;
     }
     const currentPattern = pat[0];
-    if ( !hashMap.has(currentPattern) ) {
+    if ( !hashMap[currentPattern] ) {
+      
       for ( var i = 1; i <= str.length; i++ ) {
+
         let currentStr = str.slice(0, i);
-        hashMap.set(currentPattern, currentStr);
-        if ( check(str.slice(i), pat.slice(1) ) ) {
-          return true;
+        if (Object.values(hashMap).indexOf(currentStr) === -1 ) {
+          hashMap[currentPattern] = currentStr;
+          if ( check(str.slice(i), pat.slice(1) ) ) {
+            return true;
+          }
+          delete hashMap[currentPattern];
         }
-        hashMap.delete(currentPattern);
-      }    
+      }
+           
     } else {
-      const value = hashMap.get(currentPattern);
+      const value = hashMap[currentPattern];
       const l = value.length;
       if ( str.startsWith(value) ) {
         if ( check(str.slice(l), pat.slice(1)) ) {
