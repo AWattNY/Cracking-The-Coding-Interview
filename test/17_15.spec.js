@@ -19,7 +19,7 @@ describe('Ctci - Hard Problems 17-15 Longest Words', function() {
   });
 
   it('should return null if no word can be made of other words in list  ', function() {
-    var list = ['er', 'cat', 'banana', 'dog', 'nana', 'walk', 'walker', 'dogwalker', 'dogwalkers'];
+    var list = ['cat', 'banana', 'dog', 'nana', 'walk', 'dogwalker', 'dogwalkers'];
     expect(longestWord(list)).to.equal(null);
   });
 
