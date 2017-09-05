@@ -64,7 +64,7 @@ describe('Ctci - Moderate 16-18 Pattern Matching', function() {
     
   });
 
-  it('should return false  ', function() {
+  it('should not allow two different pattern letters to have the same value  ', function() {
     expect(isMatch('rr', 'ab')).to.equal(false);
     
   }); 
